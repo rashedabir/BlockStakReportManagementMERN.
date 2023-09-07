@@ -1,6 +1,7 @@
 const Report = require("../models/reportModel");
 
 const reportCTRL = {
+  // report list
   getReport: async (req, res) => {
     try {
       const reports = await Report.find();
@@ -11,6 +12,7 @@ const reportCTRL = {
         .json({ error: true, status: 500, msg: error.message });
     }
   },
+  // create report
   createReport: async (req, res) => {
     try {
       const { name, email, address, phone, profession, fav_color } = req.body;
@@ -36,6 +38,7 @@ const reportCTRL = {
         .json({ error: true, status: 500, msg: error.message });
     }
   },
+  // delete single report
   deleteReport: async (req, res) => {
     try {
       const report = await Report.findById(req.params.id);
@@ -52,6 +55,7 @@ const reportCTRL = {
         .json({ error: true, status: 500, msg: error.message });
     }
   },
+  // get one report
   findOneReport: async (req, res) => {
     try {
       const report = await Report.findById(req.params.id);
@@ -67,6 +71,7 @@ const reportCTRL = {
         .json({ error: true, status: 500, msg: error.message });
     }
   },
+  // update one report
   updateReport: async (req, res) => {
     try {
       const { name, email, address, phone, profession, fav_color } = req.body;

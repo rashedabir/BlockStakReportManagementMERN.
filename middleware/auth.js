@@ -5,11 +5,13 @@ const auth = (req, res, next) => {
     const { authorization } = req.headers;
     const token = authorization ? authorization.split("Bearer ")[1] : null;
 
+    // check has token or not
     if (!token) {
       return res
         .status(400)
         .json({ error: true, status: 400, msg: "Invalid Athentication" });
     }
+    // if token then verify authentication
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {
         return res

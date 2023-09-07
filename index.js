@@ -19,6 +19,7 @@ app.use("*", (req, res) => {
 });
 
 const PORT = process.env.PORT;
+// mongodb live url
 const URI = process.env.MONGODB_URL;
 
 // Connect to MongoDB
@@ -27,9 +28,11 @@ mongoose.connect(URI, {
   useUnifiedTopology: true,
 });
 const db = mongoose.connection;
+// on database connection error
 db.on("error", (err) => {
   console.error(`MongoDB connection error: ${err}`);
 });
+// on database connection establish
 db.once("open", () => {
   console.log("\x1b[34m" + "Database Connected" + "\x1b[34m");
 });
