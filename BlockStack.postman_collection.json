@@ -16,7 +16,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"super admin\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"123456\",\r\n    \"rePassword\": \"123456\",\r\n    \"address\": \"dhaka\",\r\n    \"phone\": \"01629341869\",\r\n    \"profession\": \"SWE\",\r\n    \"fav_color\": \"Black\"\r\n}",
+							"raw": "{\r\n    \"name\": \"super admin\",\r\n    \"email\": \"admin@admin.com\",\r\n    \"password\": \"123456\",\r\n    \"rePassword\": \"123456\",\r\n    \"address\": \"dhaka\",\r\n    \"phone\": \"01629341869\",\r\n    \"profession\": \"SWE\",\r\n    \"fav_color\": \"Black\",\r\n    \"role\": \"USER\" // USER or ADMIN\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

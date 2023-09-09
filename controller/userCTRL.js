@@ -15,6 +15,7 @@ const userCTRL = {
         phone,
         profession,
         fav_color,
+        role,
       } = req.body;
 
       if (!name || !email || !password || !rePassword) {
@@ -48,6 +49,7 @@ const userCTRL = {
         phone,
         profession,
         fav_color,
+        role,
       });
 
       await newUser.save();
