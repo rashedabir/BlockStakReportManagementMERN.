@@ -1,13 +1,6 @@
 pipeline {
     agent any
 
-    environment {
-        IMAGE_NAME = 'my-node-app'
-        DOCKERFILE = 'Dockerfile'
-        CONTAINER_NAME = 'my-node-app'
-        PORT_MAPPING = '4001:4001'
-    }
-
     stages {
         stage('Checkout') {
             steps {
