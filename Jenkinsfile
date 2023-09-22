@@ -5,7 +5,7 @@ pipeline {
         IMAGE_NAME = 'my-node-app'
         DOCKERFILE = 'Dockerfile'
         CONTAINER_NAME = 'my-node-app-container'
-        PORT_MAPPING = '8080:4000'  // Map container port 4000 to host port 8080
+        PORT_MAPPING = '4001:4001'  // Map container port 4000 to host port 8080
     }
 
     stages {
