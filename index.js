@@ -17,7 +17,7 @@ app.use("/api", require("./routes/reportRouter"));
 app.use("*", (req, res) => {
   res
     .status(400)
-    .json({ error: true, status: 404, msg: "test server.. 404 Not Found!" });
+    .json({ error: true, status: 404, msg: "test server 404 Not Found!" });
 });
 
 const PORT = process.env.PORT;
