@@ -15,7 +15,7 @@ app.use(cors());
 app.use("/api/user", require("./routes/userRouter"));
 app.use("/api", require("./routes/reportRouter"));
 app.use("*", (req, res) => {
-  res.status(400).json({ error: true, status: 404, msg: "404 Not Found" });
+  res.status(400).json({ error: true, status: 404, msg: "404 Not Found!" });
 });
 
 const PORT = process.env.PORT;
