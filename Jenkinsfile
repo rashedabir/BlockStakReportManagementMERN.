@@ -23,12 +23,6 @@ pipeline {
             }
         }
 
-        stage('Test') {
-            steps {
-                // Add your test commands here
-            }
-        }
-
         stage('Deploy') {
             steps {
                 script {
