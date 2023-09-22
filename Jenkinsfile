@@ -34,7 +34,7 @@ pipeline {
             steps {
                 script {
                     echo 'Runnign Docker new Image..'
-                    sh 'docker run --restart always -p 4001:4001 -d --name blockstack blockstack:latest'
+                    sh 'docker run --restart always -p 4000:4000 -d --name blockstack blockstack:latest'
                     echo 'Docker image deployed successfull in dev server'
                     echo 'Show Docker Images....................'
                     sh 'docker images'
