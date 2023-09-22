@@ -6,7 +6,7 @@ pipeline {
         IMAGE_NAME = 'my-app'
         DOCKERFILE = 'Dockerfile'
         CONTAINER_NAME = 'my-app-container'
-        PORT_MAPPING = '8080:80'  // Map container port 80 to host port 8080
+        PORT_MAPPING = '4001:4001'  // Map container port 80 to host port 8080
     }
     
     stages {
