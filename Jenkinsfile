@@ -8,17 +8,17 @@ pipeline {
             }
         }
 
-        // stage('Image_Remove') {
-		//     steps {
-        //         sh 'docker rm -f blockstack || ture'
-        //         sh 'docker rmi -f blockstack'
-        //         echo 'Docker image remove successfull in dev server.'
-        //         echo 'Show Docker Images....................'
-        //         sh 'docker images'
-        //         echo 'Show Docker Container in list...............'
-        //         sh 'docker ps'
-		//     }
-	    // }
+        stage('Image_Remove') {
+		    steps {
+                sh 'docker rm -f blockstack || ture'
+                sh 'docker rmi -f blockstack'
+                echo 'Docker image remove successfull in dev server.'
+                echo 'Show Docker Images....................'
+                sh 'docker images'
+                echo 'Show Docker Container in list...............'
+                sh 'docker ps'
+		    }
+	    }
 
         stage('Build Docker Image') {
             steps {
