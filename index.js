@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors());
 
-// Routes
+// Route Routes
 app.use("/api/user", require("./routes/userRouter"));
 app.use("/api", require("./routes/reportRouter"));
 app.use("*", (req, res) => {
